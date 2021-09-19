@@ -36,12 +36,12 @@ int main()
 	void BackslashSolve( string & file_name );
 	int rank;
 	string file_name ;
-	cout<<"ÇëÊäÈëÎÄ¼şµØÖ·£º";
+	cout<<"è¯·è¾“å…¥æ–‡ä»¶åœ°å€ï¼š";
 	cin>>file_name; 
-	cout<<"ÇëÊäÈëÍê³ÉµÈ¼¶£º";
+	cout<<"è¯·è¾“å…¥å®Œæˆç­‰çº§ï¼š";
 	cin>>rank;
 	
-	BackslashSolve( file_name );//½â¾ö·´Ğ±¸ÜÎÊÌâ 	
+	BackslashSolve( file_name );//è§£å†³åæ–œæ é—®é¢˜ 	
 	string file_word="";
 	fstream fin;
 	fin.open(file_name.c_str(), ios::in );
@@ -77,7 +77,7 @@ void BackslashSolve( string & file_name)
  
 void KeywordqueueMatch(FileInclude &f,queue<string> & keyword_queue)
  {
- 	int i,j=0;
+ 	int i = 0,j = 0;
  	stack <string> temp;
  	while(!keyword_queue.empty())
  	{
@@ -190,7 +190,7 @@ while(fin>>file_word)
  	if(file_word[0] == '/' && file_word[1] == '/' )
 		{
 			cout<<"//	"<<file_word<<endl;
-			getline(fin,file_word); //  //ÅäÉÏÏÂÒ»ĞĞµÄ fin>>file_wrod Ê¹ÕâºóÃæÒ»ĞĞÈ«²¿ÎŞĞ§ 
+			getline(fin,file_word); //  //é…ä¸Šä¸‹ä¸€è¡Œçš„ fin>>file_wrod ä½¿è¿™åé¢ä¸€è¡Œå…¨éƒ¨æ— æ•ˆ 
 			fin>>file_word;
 		}
 	else if(file_word[0] == '/' && file_word[1] == '*')
@@ -234,7 +234,7 @@ while(fin>>file_word)
  					else 
  					{
  						f.sum++;
- 						if(file_word[4] == '{')		// ·ÀÖ¹³öÏÖelse{if} ÕâÖÖÇé¿ö 
+ 						if(file_word[4] == '{')		// é˜²æ­¢å‡ºç°else{if} è¿™ç§æƒ…å†µ 
  						{
  							keyword_queue.push("else");
 						 }
